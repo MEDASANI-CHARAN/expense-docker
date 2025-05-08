@@ -4,7 +4,7 @@ networks:
   default:
     external: true
     name: expense
-volume:
+volumes:
   mysql:
 services:
   mysql: 
