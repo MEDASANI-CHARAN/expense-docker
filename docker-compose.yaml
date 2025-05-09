@@ -23,10 +23,10 @@ services:
     image: mysql:1.0.0
     container_name: mysql1 # -- name mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=ExpenseApp@1 \
-        MYSQL_USER=expense \
-        MYSQL_PASSWORD=ExpenseApp@1 \
-        MYSQL_DATABASE=transactions
+      - MYSQL_ROOT_PASSWORD=ExpenseApp@1
+      - MYSQL_USER=expense
+      - MYSQL_PASSWORD=ExpenseApp@1
+      - MYSQL_DATABASE=transactions
     volumes:
       - mysql1:/var/lib/mysql # -v <volume-name>:/path/in/container
       
