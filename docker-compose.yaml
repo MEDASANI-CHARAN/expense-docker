@@ -9,15 +9,15 @@ services:
   mysql:
     image: mysql:1.0.0
     container_name: mysql # -- name mysql
-  environment:
-    - MYSQL_ROOT_PASSWORD=ExpenseApp@1 \
-      MYSQL_USER=expense \
-      MYSQL_PASSWORD=ExpenseApp@1 \
-      MYSQL_DATABASE=transactions
-  volumes:
-    - source: mysql # - mysql1:/var/lib/mysql 
-      target: /var/lib/mysql
-      type: volume # -v <volume-name>:/path/in/container
+    environment:
+      - MYSQL_ROOT_PASSWORD=ExpenseApp@1 \
+        MYSQL_USER=expense \
+        MYSQL_PASSWORD=ExpenseApp@1 \
+        MYSQL_DATABASE=transactions
+    volumes:
+      - source: mysql # - mysql1:/var/lib/mysql 
+        target: /var/lib/mysql
+        type: volume # -v <volume-name>:/path/in/container
 
   # mysql:
   #   image: mysql:1.0.0
