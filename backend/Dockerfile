@@ -3,7 +3,7 @@ EXPOSE 8080
 RUN useradd expense
 RUN mkdir /opt/server
 RUN chown expense:expense -R /opt/server
-# ENV DB_HOST=mysql
+ENV DB_HOST=mysql
 # RUN addgroup -S expense && adduser -S expense -G expense \
 #     && mkdir /opt/server \
 #     && chown expense:expense -R /opt/server
